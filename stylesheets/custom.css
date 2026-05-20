@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@700&display=swap');
+
+/* -----------------------------------
+   1. BASE TYPOGRAPHY & LAYOUT
+----------------------------------- */
+body, .md-typeset {
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1.6;
+    color: #E0E0E0;
+}
+
+.md-grid {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+}
+
+/* -----------------------------------
+   2. SHARP ENGINEERING HEADERS
+----------------------------------- */
+.md-typeset h1, .md-typeset h2 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.04em !important;
+    color: #FFFFFF !important;
+}
+
+.md-typeset h1 { font-size: 4.5rem !important; line-height: 1.1 !important; }
+.md-typeset h2 { font-size: 3rem !important; }
+.md-typeset h1 em, .md-typeset h2 em { color: #00F0FF !important; font-style: normal !important; }
+
+/* -----------------------------------
+   3. SECTION LABELS & SUBHEADERS
+----------------------------------- */
+.section-label {
+    font-family: 'JetBrains Mono', monospace !important;
+    color: #00F0FF !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+}
+
+.md-typeset h3 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    margin-top: 3rem !important;
+    margin-bottom: 1.5rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+/* -----------------------------------
+   4. SECTION PACING (AUTO HEIGHT)
+----------------------------------- */
+.hero-block {
+    min-height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    padding-top: 6rem !important;
+    padding-bottom: 4rem !important;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+    min-height: auto !important;
+}
+
+/* -----------------------------------
+   5. MODERN STICKY HEADER
+----------------------------------- */
+.md-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 70px !important;
+    background-color: rgba(5, 5, 10, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
+    z-index: 9999 !important;
+}
+
+.md-header__inner {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 0 2rem !important;
+}
+
+.md-header__title, .md-header__button.md-logo {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.md-search { display: none !important; }
+
+/* Force the top-right email icon to glow cyan on hover */
+.md-header__topic .md-social__link:hover {
+    color: #00F0FF !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* -----------------------------------
+   6. HERO BUTTONS (CYBER OVERRIDE)
+----------------------------------- */
+.hero-action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+/* Base styles for both custom buttons */
+.btn-cyber-primary, 
+.btn-cyber-secondary {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    border-radius: 2px !important;
+    padding: 0.9rem 2.5rem !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Capabilities (Solid Cyan Core) */
+.btn-cyber-primary {
+    background-color: #00F0FF !important;
+    color: #05050A !important;
+    border: 1px solid #00F0FF !important;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.25) !important;
+}
+
+.btn-cyber-primary:hover {
+    background-color: transparent !important;
+    color: #00F0FF !important;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.6) !important;
+    transform: translateY(-4px) !important;
+}
+
+/* Philosophy (Ghost Outline) */
+.btn-cyber-secondary {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.btn-cyber-secondary:hover {
+    background-color: rgba(0, 240, 255, 0.05) !important;
+    color: #00F0FF !important;
+    border-color: #00F0FF !important;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3) !important;
+    transform: translateY(-4px) !important;
+}
+
+/* -----------------------------------
+   7. GRID CARDS & INTERACTIVITY
+----------------------------------- */
+.md-typeset .grid.cards > ul > li {
+    padding: 2.5rem !important;
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease-out !important;
+}
+
+/* Force a solid cyan border and stronger glow */
+.md-typeset .grid.cards > ul > li:hover {
+    transform: translateY(-5px) !important; 
+    border-color: #00F0FF !important; 
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.25) !important;
+}
+
+/* Target all inline SVGs and Material Emojis */
+.md-typeset .grid.cards > ul > li svg,
+.md-typeset .grid.cards > ul > li svg path,
+.md-typeset .grid.cards > ul > li .twemoji,
+.md-typeset .grid.cards > ul > li .md-icon,
+.md-typeset .grid.cards > ul > li > :first-child {
+    color: #00F0FF !important;
+    fill: #00F0FF !important;
+}
+
+/* Target standard Markdown Images using a cyan color filter */
+.md-typeset .grid.cards > ul > li img {
+    filter: invert(65%) sepia(61%) saturate(3085%) hue-rotate(152deg) brightness(101%) contrast(101%) !important;
+}
+
+/* Keep the card subtext grey for contrast */
+.md-typeset .grid.cards > ul > li p, 
+.md-typeset .grid.cards > ul > li ul {
+    font-weight: 300 !important;
+    color: #A0AEC0 !important;
+}
+
+/* -----------------------------------
+   8. HORIZONTAL PIPELINE COMPONENT
+----------------------------------- */
+.mogsec-pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 3rem;
+    margin: 3rem 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.pipeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pipeline-num { color: #00F0FF; font-size: 0.8rem; margin-bottom: 0.5rem; }
+.pipeline-title { color: #FFFFFF; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.pipeline-sub { color: rgba(255, 255, 255, 0.4); font-size: 0.7rem; text-transform: lowercase; }
+.pipeline-arrow { color: #00F0FF; opacity: 0.5; font-size: 1.2rem; }
+
+/* -----------------------------------
+   9. PHILOSOPHY SECTION
+----------------------------------- */
+.philosophy-body {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    color: #E2E8F0 !important;
+}
+
+/* -----------------------------------
+   10. FOOTER CLEANUP
+----------------------------------- */
+/* Hide the default MkDocs attribution text and link */
+.md-copyright {
+    font-size: 0 !important;
+}
+
+/* Restore visibility and styling for the custom D3FND copyright string */
+.md-copyright__highlight {
+    font-size: 0.65rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    display: block !important;
+}
+
+/* -----------------------------------
+   11. INJECTED HEADER ICON
+----------------------------------- */
+.custom-mail-icon {
+    margin-left: auto !important; 
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: all 0.3s ease !important;
+}
+
+.custom-mail-icon:hover {
+    color: #00F0FF !important;
+    transform: translateY(-2px) !important;
+}
+
+/* -----------------------------------
+   12. MOBILE OPTIMIZATION & CLEANUP
+----------------------------------- */
+/* Hide the mobile hamburger menu toggle completely */
+.md-header__button[for="__drawer"] {
+    display: none !important;
+}
+
+/* Mobile-specific responsive adjustments */
+@media screen and (max-width: 768px) {
+    /* Scale down the massive desktop typography */
+    .md-typeset h1 {
+        font-size: 2.8rem !important;
+        line-height: 1.2 !important;
+    }
+    .md-typeset h2 {
+        font-size: 2rem !important;
+    }
+
+    /* Reclaim horizontal screen real estate */
+    .md-grid {
+        padding: 0 1rem !important;
+    }
+    
+    .md-typeset .grid.cards > ul > li {
+        padding: 1.5rem !important;
+    }
+
+    /* Stack the horizontal pipeline vertically so it does not overflow */
+    .mogsec-pipeline {
+        flex-direction: column !important;
+        padding: 1.5rem !important;
+        gap: 0.5rem !important;
+    }
+    
+    /* Point the pipeline arrows downward */
+    .pipeline-arrow {
+        transform: rotate(90deg) !important;
+        margin: 0.5rem 0 !important;
+    }
+
+    /* Adjust section spacing for smaller screens */
+    .section-block {
+        padding-top: 4rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    /* Force hero buttons to stack cleanly and stretch the full width */
+    .hero-action-buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 1rem !important;
+    }
+    
+    .hero-action-buttons a {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+/* -----------------------------------
+   13. ASSET SCALING & UI CLEANUP
+----------------------------------- */
+/* Force the native search button to disappear completely on mobile */
+label[for="__search"] {
+    display: none !important;
+}
+
+/* Scale the new SVG logo cleanly within the sticky header */
+.md-header__button.md-logo img, 
+.md-header__button.md-logo svg {
+    height: 38px !important;
+    width: auto !important;
+    fill: #FFFFFF !important;
+    transition: all 0.3s ease !important;
+}
+
+.md-header__button.md-logo:hover img, 
+.md-header__button.md-logo:hover svg {
+    transform: translateY(-2px);
+}
+
+/* -----------------------------------
+   14. HEADER OVERRIDES & SEARCH REMOVAL
+----------------------------------- */
+/* Kill the native search button functionality and visibility */
+label[for="__search"] {
+    display: none !important;
+}
+
+/* Hide the theme's default site title injection */
+.md-header__title {
+    display: none !important;
+}
+
+/* -----------------------------------
+   15. HEADER LOGO & TEXT ALIGNMENT
+----------------------------------- */
+.md-header__button.md-logo {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    margin-right: auto !important;
+}
+
+/* Icon is now larger (42px) */
+.md-header__button.md-logo img {
+    display: block !important;
+    opacity: 1 !important;
+    height: 42px !important; 
+    width: auto !important;
+}
+
+/* Text is now smaller and subtle */
+.brand-text {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 500 !important; /* Lighter weight */
+    font-size: 0.9rem !important; /* Smaller size */
+    color: #888888 !important;    /* Softer color to minimize dominance */
+    margin-left: 10px !important;
+    vertical-align: middle !important;
+}
+
+.custom-mail-icon {
+    display: flex !important;
+    align-items: center !important;
+    margin-left: 20px !important;
+}

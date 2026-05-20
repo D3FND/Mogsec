@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<!-- Left Bracket -->
+<path d="M 51 100 L 91 100 L 91 120 L 71 120 L 71 280 L 91 280 L 91 300 L 51 300 Z" fill="#FFFFFF"/>
+<!-- Slash -->
+<path d="M 103 280 L 133 280 L 183 120 L 153 120 Z" fill="#00F0FF"/>
+<!-- M -->
+<path d="M 193 280 L 193 120 L 223 120 L 245 175 L 267 120 L 297 120 L 297 280 L 273 280 L 273 170 L 245 235 L 217 170 L 217 280 Z" fill="#FFFFFF"/>
+<!-- Right Bracket -->
+<path d="M 309 100 L 349 100 L 349 300 L 309 300 L 309 280 L 329 280 L 329 120 L 309 120 Z" fill="#FFFFFF"/>
+</svg>
